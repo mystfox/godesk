@@ -32,7 +32,7 @@ func goDesk() {
 		err    error
 	)
 	cmdName := "desk"
-	cmdArgs := []string{"list"}
+	cmdArgs := []string{"list", "--only-names"}
 	if cmdOut, err = exec.Command(cmdName, cmdArgs...).Output(); err != nil {
 		fmt.Fprintln(os.Stderr, "Error:", err)
 		os.Exit(1)
